@@ -31,7 +31,7 @@ a {
 
 #kinds {
   height: 100%;
-  width: 70px;
+  width: 60px;
   float: left;
   position: fixed;
   left: 0;
@@ -57,11 +57,11 @@ a {
 
 #kinds .swtich p {
   position: absolute;
-  width: 60px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -120%);
-          transform: translate(-50%, -120%);
+  top: 20%;
+  left: 0%;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
 }
 
 #kinds .swtich.knife {
