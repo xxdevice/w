@@ -12,39 +12,34 @@ a {
     display: block;
 }
 .lb {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
+.shop {
+    font-size: 14px;
+}
 
-.physical {
-    background:#cacaca;
+.attri {
     display: inline-block;
     padding: 3px;
+}
+.physical {
+    background:#cacaca;
 }
 .electric {
     background:#e6ce78;
-    display: inline-block;
-    padding: 3px;
 }
 .ether {
     background:#dcb2f7;
-    display: inline-block;
-    padding: 3px;
 }
 .thermal {
     background:#e2b2b2;
-    display: inline-block;
-    padding: 3px;
 }
 .gravity {
     background:#cbc8ff;
-    display: inline-block;
-    padding: 3px;
 }
 .beam {
     background:#a2ffee;
-    display: inline-block;
-    padding: 3px;
 }
 
 
@@ -80,8 +75,11 @@ a {
         vertical-align: middle;
         text-align: center;
         position: relative;
-        background: #cccccc;
         border: 1px solid black;
+        border-top: none;
+        &:first-child {
+            border-top: 1px solid black;
+        }
     }
     .swtich p {
         position: absolute;
