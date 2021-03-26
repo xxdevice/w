@@ -23,7 +23,7 @@ a {
     #weapons {
         display: inline-block;
         width: 100%;
-        height: 50px;
+        height: 30px;
     }
 }
 #kinds {
@@ -32,7 +32,7 @@ a {
     float: left;
     position: fixed;
     left: 0;
-    top: 50px;
+    top: 30px;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -49,8 +49,10 @@ a {
     }
     .swtich p {
         position: absolute;
-        top: 20%;
+        height: 100%;
+        top: 0%;
         left: 0%;
+        text-align: center;
 
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
@@ -105,10 +107,9 @@ a {
     }
 }
 #sheat {
-    width:  calc(100% - 70px);
-    margin-left: 70px;
-    margin-top: 50px;
-    padding: 0 5px;
+    width:  calc(100% - 60px);
+    margin-left: 60px;
+    margin-top: 30px;
     float: left;
 }
 
@@ -119,6 +120,7 @@ a {
     .page {
         font-size: 15px;
         font-weight: 300;
+        padding: 0 10px;
         @media screen and (max-width: 768px) {
         }
         &::after {
