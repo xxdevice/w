@@ -88,10 +88,10 @@ $('select').change(function () {
   var val = $('#weapons option:selected').val();
   console.log(val);
   if (val == 'select') return;
-  $('.affix').fadeOut();
-  $('.swtich').fadeOut();
-  $('.swtich.' + val ).fadeIn();
-  $('.affix.' + val ).fadeIn();
+  $('.affix').hide();
+  $('.swtich').hide();
+  $('.affix.' + val ).show();
+  $('.swtich.' + val ).show();
 });
 
 window.onload = function() {
