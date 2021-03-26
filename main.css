@@ -115,6 +115,8 @@ a {
 #sheat {
   width: calc(100% - 70px);
   margin-left: 70px;
+  margin-top: 50px;
+  padding: 0 5px;
   float: left;
 }
 
@@ -126,12 +128,6 @@ a {
 #container .page {
   font-size: 15px;
   font-weight: 300;
-}
-
-@media screen and (max-width: 768px) {
-  #container .page {
-    margin: 60px 5px;
-  }
 }
 
 #container .page::after {
