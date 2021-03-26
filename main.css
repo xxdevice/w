@@ -1,5 +1,6 @@
 * {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN","Meiryo UI","Yu Gothic UI", "MS PGothic", sans-serif;
+  color: #292929;
 }
 
 a {
@@ -16,6 +17,42 @@ a {
 .lb {
   font-size: 14px;
   font-weight: bold;
+}
+
+.physical {
+  background: #cacaca;
+  display: inline-block;
+  padding: 3px;
+}
+
+.electric {
+  background: #e6ce78;
+  display: inline-block;
+  padding: 3px;
+}
+
+.ether {
+  background: #dcb2f7;
+  display: inline-block;
+  padding: 3px;
+}
+
+.thermal {
+  background: #e2b2b2;
+  display: inline-block;
+  padding: 3px;
+}
+
+.gravity {
+  background: #cbc8ff;
+  display: inline-block;
+  padding: 3px;
+}
+
+.beam {
+  background: #a2ffee;
+  display: inline-block;
+  padding: 3px;
 }
 
 #header {
@@ -143,9 +180,22 @@ a {
   margin-bottom: 10px;
 }
 
+#container .page .affix td {
+  border: 1px solid #1c9696;
+  background: #cbe4e4;
+}
+
 #container .page .affix label {
   display: inline-block;
   width: 140px;
+  margin: 5px 0;
+}
+
+#container .page .wanted {
+  border: 1px solid #d41414;
+  background: #d89f9f;
+  display: block;
+  padding: 5px;
   margin: 5px 0;
 }
 

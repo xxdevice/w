@@ -56,24 +56,24 @@ $(function() {
 
           if( data[i].weapon == "knife" ) {
             if( j == 0 ) {
-              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:block" >').append($('<table>').append("<caption>"+element.series+"("+element.maker+") <br>"+ element.attribute + "属性 (" +element.power+")<br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
+              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:block" >').append($('<table>').append("<caption>"+element.series+"<br>"+element.maker+' <span class="'+element.color+'">'+ element.attribute + "</span> (" +element.power+")<br><br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
                 return '<label><span>'+ el +'</span></label>';
-              })))).append("<p>"+element.tips+"</p>"));
+              })))).append('<p class="wanted">'+element.tips+"</p>"));
             } else {
-              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:none" >').append($('<table>').append("<caption>"+element.series+"("+element.maker+") <br>"+ element.attribute + "属性 (" +element.power+")<br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
+              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:none" >').append($('<table>').append("<caption>"+element.series+"<br>"+element.maker+' <span class="'+element.color+'">'+ element.attribute + "</span> " +element.power+")<br><br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
                 return '<label><span>'+ el +'</span></label>';
-              })))).append("<p>"+element.tips+"</p>"));
+              })))).append('<p class="wanted">'+element.tips+"</p>"));
             }
             $("#kinds").append($('<a class="swtich '+data[i].weapon+'" href="javascript:OnLinkClick(\''+data[i].weapon+j+'\')" value="'+data[i].weapon+j+'" style="display:block"><p>'+element.series.replace("シリーズ","")+'</p></a>'));
           } else {
             if( j == 0 ) {
-              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:none">').append($('<table>').append("<caption>"+element.series+"("+element.maker+") <br>"+ element.attribute + "属性 (" +element.power+")<br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
+              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:none">').append($('<table>').append("<caption>"+element.series+"<br>"+element.maker+' <span class="'+element.color+'">'+ element.attribute + "</span> (" +element.power+")<br><br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
                 return '<label><span>'+ el +'</span></label>';
-              })))).append("<p>"+element.tips+"</p>"));
+              })))).append('<p class="wanted">'+element.tips+"</p>"));
             } else {
-              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:none">').append($('<table>').append("<caption>"+element.series+"("+element.maker+") <br>"+ element.attribute + "属性 (" +element.power+")<br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
+              $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:none">').append($('<table>').append("<caption>"+element.series+"<br>"+element.maker+' <span class="'+element.color+'">'+ element.attribute + "</span> (" +element.power+")<br><br>ショップ<br>("+ element.shop+")</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
                 return '<label><span>'+ el +'</span></label>';
-              })))).append("<p>"+element.tips+"</p>"));
+              })))).append('<p class="wanted">'+element.tips+"</p>"));
             }
             $("#kinds").append($('<a class="swtich '+data[i].weapon+'" href="javascript:OnLinkClick(\''+data[i].weapon+j+'\')" style="display:none"><p>'+element.series.replace("シリーズ","")+'</p></a>'));
           }
@@ -96,6 +96,8 @@ $('select').change(function () {
 function OnLinkClick(e) {
   $('.affix').hide();
   $('.affix#' + e ).show();
+  $(".swtich").removeClass("active");
+  console.log(this);
 }
 
 window.onload = function() {
