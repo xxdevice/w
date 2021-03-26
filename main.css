@@ -13,6 +13,11 @@ a {
   display: block;
 }
 
+.lb {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 #header {
   position: fixed;
   left: 0;
@@ -132,16 +137,10 @@ a {
   padding: 0 10px;
 }
 
-#container .page::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 #container .page .affix {
   float: left;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 
 #container .page .affix label {
@@ -155,13 +154,7 @@ a {
 }
 
 footer {
-  margin: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  footer {
-    padding-bottom: 50px;
-  }
+  padding: 0 5px;
 }
 
 footer .link {

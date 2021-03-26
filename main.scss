@@ -10,6 +10,10 @@ a {
     width: 100%;
     display: block;
 }
+.lb {
+    font-size: 14px;
+    font-weight: bold;
+}
 
 
 #header {
@@ -121,13 +125,6 @@ a {
         font-size: 15px;
         font-weight: 300;
         padding: 0 10px;
-        @media screen and (max-width: 768px) {
-        }
-        &::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
         .affix {
             float: left;
             width: 100%;
@@ -136,7 +133,7 @@ a {
                 width: 140px;
                 margin: 5px 0;
             }
-            margin-bottom: 70px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -146,11 +143,7 @@ a {
 }
 
 footer {
-    margin:  20px;
-
-    @media screen and (max-width: 768px) {
-        padding-bottom: 50px;
-    }
+    padding: 0 5px;
     .link {
         color: blue;
         &:hover {
