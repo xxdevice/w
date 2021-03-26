@@ -14,6 +14,9 @@ a {
 }
 
 #header {
+  position: fixed;
+  left: 0;
+  top: 0;
   display: block;
   width: 100%;
   max-width: 100%;
@@ -44,24 +47,73 @@ a {
 }
 
 #kinds .swtich {
+  width: 100%;
   vertical-align: middle;
   text-align: center;
   position: relative;
   background: #cccccc;
+  border: 1px solid black;
 }
 
 #kinds .swtich p {
-  osition: absolute;
+  position: absolute;
+  width: 60px;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -120%);
+          transform: translate(-50%, -120%);
 }
 
 #kinds .swtich.knife {
   height: calc((100% - 50px) / 8);
 }
 
+#kinds .swtich.long {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.shield {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.dual {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.javelin {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.photon {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.assault {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.gatling {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.dualgun {
+  height: calc((100% - 50px) / 9);
+}
+
+#kinds .swtich.sniper {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.raygun {
+  height: calc((100% - 50px) / 8);
+}
+
+#kinds .swtich.psycho {
+  height: calc((100% - 50px) / 8);
+}
+
 #sheat {
-  width: 100%;
+  width: calc(100% - 70px);
   margin-left: 70px;
   float: left;
 }
@@ -72,14 +124,13 @@ a {
 }
 
 #container .page {
-  margin: 0px 10px;
   font-size: 15px;
   font-weight: 300;
 }
 
 @media screen and (max-width: 768px) {
   #container .page {
-    margin: 0px 5px;
+    margin: 60px 5px;
   }
 }
 
@@ -97,7 +148,7 @@ a {
 
 #container .page .affix label {
   display: inline-block;
-  width: 9.5em;
+  width: 140px;
   margin: 5px 0;
 }
 

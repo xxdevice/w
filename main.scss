@@ -13,6 +13,9 @@ a {
 
 
 #header {
+    position: fixed;
+    left: 0;
+    top: 0;
     display: block;
     width: 100%;
     max-width: 100%;
@@ -37,23 +40,71 @@ a {
     flex-direction: column;
     height: 100%;
     .swtich {
+        width: 100%;
         vertical-align: middle;
         text-align: center;
         position: relative;
         background: #cccccc;
+        border: 1px solid black;
     }
     .swtich p {
-        osition: absolute;
+        position: absolute;
+        width: 60px;
         top: 50%;
         left: 50%;
+        transform: translate(-50%, -120%);
         
     }
     .swtich.knife {
         height: calc((100% - 50px) / 8 );
     }
+
+    .swtich.long {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.shield {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.dual {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.javelin {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.photon {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.assault {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.gatling {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.dualgun {
+        height: calc((100% - 50px) / 9 );
+    }
+
+    .swtich.sniper {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.raygun {
+        height: calc((100% - 50px) / 8 );
+    }
+
+    .swtich.psycho {
+        height: calc((100% - 50px) / 8 );
+    }
 }
 #sheat {
-    width:  100%;
+    width:  calc(100% - 70px);
     margin-left: 70px;
     float: left;
 }
@@ -63,11 +114,10 @@ a {
     height: 100%;
     width: 100%;
     .page {
-        margin: 0px 10px ;
         font-size: 15px;
         font-weight: 300;
         @media screen and (max-width: 768px) {
-            margin: 0px 5px ;
+            margin: 60px 5px ;
         }
         &::after {
             content: "";
@@ -79,7 +129,7 @@ a {
             width: 100%;
             label {
                 display: inline-block;
-                width: 9.5em;
+                width: 140px;
                 margin: 5px 0;
             }
             margin-bottom: 70px;
