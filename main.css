@@ -7,10 +7,6 @@ a {
   text-decoration: none;
 }
 
-#sheat, #collect, #collection {
-  display: none;
-}
-
 #app {
   max-width: 100%;
   width: 100%;
@@ -31,16 +27,47 @@ a {
 }
 
 #kinds {
-  width: 15%;
+  height: 100%;
+  width: 70px;
   float: left;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+#kinds .swtich {
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  background: #cccccc;
+}
+
+#kinds .swtich p {
+  osition: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#kinds .swtich.knife {
+  height: calc((100% - 50px) / 8);
 }
 
 #sheat {
-  width: 85%;
+  width: 100%;
+  margin-left: 70px;
   float: left;
 }
 
 #container {
+  height: 100%;
   width: 100%;
 }
 
@@ -74,24 +101,8 @@ a {
   margin: 5px 0;
 }
 
-.sheat_dev_checkbox {
-  display: none;
-}
-
-.sheat_dev_checkbox:checked + .open_other {
-  display: none;
-}
-
-.sheat_dev_checkbox:checked ~ .rank {
-  display: block !important;
-}
-
 .none {
   display: none;
-}
-
-.active {
-  display: block !important;
 }
 
 footer {

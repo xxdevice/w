@@ -4,18 +4,7 @@ var collect = "";
 var collection ="";
 
 
-function tabChange(pattern) {
-  $('#sheat').removeClass('active');
-  $('#collect').removeClass('active');
-  $('#collection').removeClass('active');
-  if( pattern == -1 ) {
-    $('#sheat').addClass('active');
-  } else if ( pattern == 0 ) {
-    $('#collect').addClass('active');
-  } else {
-    $('#collection').addClass('active');
-  }
-}
+
 function clickEvent(id) {
   var ch = $(id).find("input[type='checkbox']:checked").map(function(i,e){
     return e.value
@@ -44,7 +33,6 @@ function search(weap,aff){
 
 
 $(function() {
-  tabChange(-1);
   $.getJSON("affix.json" , function(affix) {
     $.getJSON("weapons.json" , function(data) {
       var
@@ -70,12 +58,12 @@ $(function() {
             $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:block" >').append($('<table>').append("<caption>"+element.series+"("+element.maker+") "+ element.attribute + "属性 (" +element.power+")<br>ショップ:"+ element.shop+"</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
               return '<label><span>'+ el +'</span></label>';
             })))).append("<p>"+element.tips+"</p>"));
-            $("#kinds").append($('<div class="swtich '+data[i].weapon+'" style="display:block">'+element.series.replace("シリーズ","")+'</div>'));
+            $("#kinds").append($('<div class="swtich '+data[i].weapon+'" value="'+data[i].weapon+j+'" style="display:block"><p>'+element.series.replace("シリーズ","")+'</p></div>'));
           } else {
             $("#sheat .page").append($('<div class="affix '+data[i].weapon+'" id="'+data[i].weapon+j+'" style="display:none">').append($('<table>').append("<caption>"+element.series+"("+element.maker+") "+ element.attribute + "属性 (" +element.power+")<br>ショップ:"+ element.shop+"</caption>").append($('<td>').append(aff.affix.map(function(el,idx){
               return '<label><span>'+ el +'</span></label>';
             })))).append("<p>"+element.tips+"</p>"));
-            $("#kinds").append($('<div class="swtich '+data[i].weapon+'" style="display:none">'+element.series.replace("シリーズ","")+'</div>'));
+            $("#kinds").append($('<div class="swtich '+data[i].weapon+'" value="'+data[i].weapon+j+'" style="display:none"><p>'+element.series.replace("シリーズ","")+'</p></div>'));
           }
         });
         
