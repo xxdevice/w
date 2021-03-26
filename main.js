@@ -89,6 +89,8 @@ $('select').change(function () {
   console.log(val);
   if (val == 'select') return;
   $('.affix').fadeOut();
+  $('.swtich').fadeOut();
+  $('.swtich.' + val ).fadeIn();
   $('.affix.' + val ).fadeIn();
 });
 
